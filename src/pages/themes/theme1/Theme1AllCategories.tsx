@@ -200,7 +200,7 @@ const Theme1AllCategories = ({ categories }: Props) => {
             </div>
 
             {/* Categories and Products */}
-            <div className="max-w-7xl mx-auto px-4 py-8">
+            <div className="max-w-[1200px] mx-auto px-4">
                 {visibleCategories.map((category) => (
                     <div key={category._id}>
                         <div className="my-8" ref={el => { categoryRefs.current[category._id] = el; }}>

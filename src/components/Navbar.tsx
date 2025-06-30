@@ -1,14 +1,15 @@
-import  { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Clock, Link, MapPin, Menu, Phone, X, Instagram, Facebook } from "lucide-react";
+import { NavLink, useParams } from "react-router-dom";
 
 type Props = {
     business: any
 };
 
 const Navbar = ({ business }: Props) => {
+    const { slug } = useParams<{ slug: string }>()
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-    // Menü açıkken body scroll kapatma
     useEffect(() => {
         document.body.style.overflow = isMobileMenuOpen ? "hidden" : "auto";
         return () => {
@@ -28,9 +29,9 @@ const Navbar = ({ business }: Props) => {
     return (
         <nav className="w-full fixed top-0 z-50">
             <div style={{ clipPath: "polygon(50% 100%, 0% 80%, 0% 0%, 100% 0%, 100% 80%, 50% 100%)" }} className="w-full shadow-md px-4 py-3 flex justify-center items-center relative bg-[#00ADB5]">
-                <div className="flex items-center gap-10 text-white capitalize">
+                <NavLink to={`/${slug}`} className="flex items-center gap-10 text-white capitalize">
                     <img src={`${import.meta.env.VITE_API_URL}/${business.image}`} alt="QR Menu Logo" className="h-20 object-contain" />
-                </div>
+                </NavLink>
 
                 <div className="md:hidden absolute right-5">
                     <button onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)} className="text-gray-700 focus:outline-none ">

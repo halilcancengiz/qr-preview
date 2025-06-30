@@ -32,13 +32,11 @@ const AllCategoriesLayout = () => {
 
   useEffect(() => {
     fetchMenu()
-    console.log(slug)
   }, [slug])
 
   useEffect(() => {
-    console.log(data)
-    console.log("theme", data?.theme)
-  }, [data])
+
+  }, [])
 
   return (
     <div className='flex-1 '>

@@ -33,13 +33,21 @@ const CategoriesLayout = () => {
 
     useEffect(() => {
         fetchMenu()
-        console.log(slug)
     }, [slug])
 
     useEffect(() => {
         console.log(data)
-        console.log("theme", data?.theme)
     }, [data])
+
+    const [language, setLanguage] = useState("en"); // default dil
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        const userLang = navigator.language.split("-")[0]; // "tr-TR" → "tr"
+        setLanguage(userLang);
+        const checkDevice = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+        setIsMobile(checkDevice);
+    }, []);
 
     return (
         <div className='flex-1 '>
@@ -53,6 +61,8 @@ const CategoriesLayout = () => {
                                 <div className='flex flex-col h-full'>
                                     <Theme1Header business={data.business} />
                                     <Theme1Categories slug={slug} data={data.menu} />
+                                    {isMobile ? "Mobil cihazdan giriş yapıldı" : "Masaüstü cihazdan giriş yapıldı"}
+                                    <p>Tarayıcı dili: {language}</p>
                                     <Theme1Footer businessInfo={data.business} />
                                 </div>
                             ) : data?.theme === "theme2" ? (
@@ -62,7 +72,10 @@ const CategoriesLayout = () => {
                                     <Theme2Footer />
                                 </div>
                             ) : (
-                                <div>Bilinmeyen</div>
+                                <div>
+                                    {isMobile ? "Mobil cihazdan giriş yapıldı" : "Masaüstü cihazdan giriş yapıldı"}
+                                    <p>Tarayıcı dili: {language}</p>
+                                </div>
                             )
 
                         }
