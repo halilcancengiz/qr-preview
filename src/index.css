@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+
+.scroll-container {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.scroll-container::-webkit-scrollbar {
+    display: none;
+}
+
+@keyframes glow {
+    0% {
+        background-color: hsl(240 3.7% 15.9%);
+    }
+
+    100% {
+        background-color: white;
+    }
+}
+
+#circle-1,
+#circle-2,
+#circle-3,
+#circle-4,
+#circle-5,
+#circle-6 {
+    background-color: white;
+    animation: glow 3s infinite;
+    border-radius: 50%;
+}
+
+#circle-1 {
+    animation-delay: 0s;
+}
+
+#circle-2 {
+    animation-delay: 0.5s;
+}
+
+#circle-3 {
+    animation-delay: 1s;
+}
+
+#circle-4 {
+    animation-delay: 1.5s;
+}
+
+#circle-5 {
+    animation-delay: 2s;
+}
+
+#circle-6 {
+    animation-delay: 2.5s;
+}
+
+
+html,
+body,
+#root {
+    font-family: "Roboto", sans-serif;
+    /* font-family: "Geist", sans-serif; */
+}
+
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
