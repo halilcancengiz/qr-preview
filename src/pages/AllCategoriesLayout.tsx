@@ -12,9 +12,7 @@ import Theme1AllCategories from './themes/theme1/Theme1AllCategories'
 import Theme2AllCategories from './themes/theme2/Theme2AllCategories'
 import type { IGetMenuBySlugResponse } from '../types/allTypes'
 
-type Props = {}
-
-const AllCategoriesLayout = (props: Props) => {
+const AllCategoriesLayout = () => {
 
   const dispatch = useDispatch()
   const { slug } = useParams()

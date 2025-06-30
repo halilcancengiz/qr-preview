@@ -1,8 +1,6 @@
-import React from 'react'
 
-type Props = {}
 
-const Theme2Header = (props: Props) => {
+const Theme2Header = () => {
   return (
     <div>Theme2Header</div>
   )

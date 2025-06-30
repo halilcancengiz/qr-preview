@@ -1,10 +1,9 @@
-import React from 'react'
+
 import notFoundImage from '../assets/images/notfound.jpg'
 import { NavLink } from 'react-router-dom'
 
-type Props = {}
 
-const NotFound = (props: Props) => {
+const NotFound = () => {
     return (
         <div className='min-h-screen w-full bg-white flex flex-col items-center justify-center p-5'>
 

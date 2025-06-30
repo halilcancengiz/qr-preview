@@ -1,6 +1,6 @@
-import React from 'react'
+
 import { Link as LinkIcon } from "lucide-react"
-import { NavLink, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 type Props = {
   businessInfo: any
 }

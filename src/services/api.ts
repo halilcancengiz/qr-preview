@@ -1,5 +1,5 @@
 import { fetchBaseQuery, createApi } from '@reduxjs/toolkit/query/react'
-import type { BaseResponse, IBusiness, ICategory, IGetMenuBySlugRequest, IGetMenuBySlugResponse } from '../types/allTypes'
+import type { BaseResponse, IGetMenuBySlugRequest, IGetMenuBySlugResponse } from '../types/allTypes'
 
 
 export const baseApi = createApi({

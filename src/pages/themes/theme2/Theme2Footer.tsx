@@ -1,8 +1,5 @@
-import React from 'react'
 
-type Props = {}
-
-const Theme2Footer = (props: Props) => {
+const Theme2Footer = () => {
   return (
     <div>Theme2Footer</div>
   )

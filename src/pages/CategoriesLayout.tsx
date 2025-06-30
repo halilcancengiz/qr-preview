@@ -12,9 +12,8 @@ import Theme2Categories from './themes/theme2/Theme2Categories'
 import Theme2Footer from './themes/theme2/Theme2Footer'
 import type { IGetMenuBySlugResponse } from '../types/allTypes'
 
-type Props = {}
 
-const CategoriesLayout = (props: Props) => {
+const CategoriesLayout = () => {
 
     const dispatch = useDispatch()
     const { slug } = useParams()

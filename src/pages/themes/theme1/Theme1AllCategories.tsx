@@ -1,5 +1,5 @@
-import React, { useEffect, useState, useRef } from 'react'
-import { ChevronLeft, ChevronRight, Clock, Eye } from 'lucide-react'
+import { useEffect, useState, useRef } from 'react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import type { ICategory, IProduct } from '../../../types/allTypes'
 import HeaderLine from '../../../assets/images/headerlines/HeaderLine'
 

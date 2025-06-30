@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Clock, Link, MapPin, Menu, Phone, X, Instagram, Facebook } from "lucide-react";
 
 type Props = {

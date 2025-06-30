@@ -1,10 +1,10 @@
-import React from 'react'
 
 type Props = {
     categories: any
 }
 
-const Theme2AllCategories = (props: Props) => {
+const Theme2AllCategories = ({categories}: Props) => {
+    console.log(categories)
     return (
         <div className='h-full'>Theme2AllCategories</div>
     )
